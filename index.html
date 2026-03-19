@@ -60,7 +60,7 @@ input[type=range]{flex:1;min-width:180px;accent-color:#7F77DD}
   <span><span class="dot" style="background:#1a3a2a;border:1px solid #5DCAA5"></span>Lowest fee</span>
 </div>
 <div class="remarks">
-  <strong>GRVT</strong> — Negative maker fee (rebate) from Level 9; lower volume thresholds than most exchanges.<br/>
+  <strong>GRVT</strong> — Negative maker fee (rebate) across ALL tiers; lowest volume thresholds among all exchanges.<br/>
   <strong>Binance</strong> — Must hold BNB (5–5,500); pay fees in BNB for extra 10% discount.<br/>
   <strong>OKX</strong> — Can upgrade via asset balance alone; negative maker fees (rebate) from VIP 7+.<br/>
   <strong>Bybit</strong> — Pro tiers require &gt;20% API trade ratio; fees shown for G1 (major) pairs.<br/>
@@ -72,15 +72,15 @@ input[type=range]{flex:1;min-width:180px;accent-color:#7F77DD}
 <script>
 const data={
 GRVT:[
-{tier:"Level 1",min:0,max:1e6,maker:.027,taker:.055},
-{tier:"Level 2",min:1e6,max:5e6,maker:.025,taker:.049},
-{tier:"Level 3",min:5e6,max:1e7,maker:.022,taker:.044},
-{tier:"Level 4",min:1e7,max:5e7,maker:.018,taker:.039},
-{tier:"Level 5",min:5e7,max:1e8,maker:.014,taker:.034},
-{tier:"Level 6",min:1e8,max:2.5e8,maker:.009,taker:.028},
-{tier:"Level 7",min:2.5e8,max:5e8,maker:.005,taker:.024},
-{tier:"Level 8",min:5e8,max:1e9,maker:.001,taker:.02},
-{tier:"Level 9",min:1e9,max:3.5e10,maker:-.003,taker:.019}
+{tier:"Level 1",min:0,max:1e6,maker:-0.0001,taker:.055},
+{tier:"Level 2",min:1e6,max:5e6,maker:-0.0004,taker:.049},
+{tier:"Level 3",min:5e6,max:1e7,maker:-0.0008,taker:.044},
+{tier:"Level 4",min:1e7,max:5e7,maker:-0.001,taker:.039},
+{tier:"Level 5",min:5e7,max:1e8,maker:-0.0015,taker:.034},
+{tier:"Level 6",min:1e8,max:2.5e8,maker:-0.002,taker:.028},
+{tier:"Level 7",min:2.5e8,max:5e8,maker:-0.0023,taker:.024},
+{tier:"Level 8",min:5e8,max:1e9,maker:-0.0025,taker:.02},
+{tier:"Level 9",min:1e9,max:3.5e10,maker:-0.003,taker:.019}
 ],
 Binance:[
 {tier:"Regular",min:0,max:5e6,maker:.02,taker:.05},
